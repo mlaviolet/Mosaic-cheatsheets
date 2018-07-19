@@ -1,9 +1,8 @@
 # Mosaic-cheatsheets
 RStudio-style cheatsheets for the mosaic package
 
-## Testing
-* Item 1
-* Item 2
-  * Item 2a
-  * Item 2b
+The `mosaic` package is designed to facilitate the use of R in statistics and calculus
+instruction by providing a number of functions that 
+* make many common tasks fit into a common template
+* simplify some tasks that would otherwise be too complicated for beginners.
   
