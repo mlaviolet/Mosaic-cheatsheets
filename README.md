@@ -10,6 +10,6 @@ This page contains cheat sheets that make learning about and using `mosaic` easi
 
 The cheat sheets are adapted from the *Student's Guide to R* by Horton, Pruim and Kaplan, in [`ggformula`](https://github.com/ProjectMOSAIC/LittleBooks/raw/master/StudentGuide/MOSAIC-StudentGuide.pdf) and [`lattice`](https://cran.r-project.org/doc/contrib/Horton+Pruim+Kaplan_MOSAIC-StudentGuide.pdf) versions. 
 
-You can find out more about Project MOSAIC at [http://mosaic-web.org]. Also see (OpenIntro)[https://www.openintro.org/] for inexpensive textbooks that work well with `mosaic` and other resources.
+You can find out more about Project MOSAIC at [http://mosaic-web.org]. Also see [OpenIntro](https://www.openintro.org/) for inexpensive textbooks that work well with `mosaic` and other resources.
   
 For suggestions and corrections, open an issue here or write to statman54@gmail.com.
