@@ -8,7 +8,7 @@ This page contains cheat sheets that make learning about and using `mosaic` easi
 * [PDF](https://github.com/mlaviolet/Mosaic-cheatsheets/blob/master/mosaic-cheatsheet-gf.pdf) and [source PowerPoint](https://github.com/mlaviolet/Mosaic-cheatsheets/blob/master/mosaic-cheatsheet-gf.pptx) with graphics using `ggformula`, as now recommended by the developers of `mosaic`.
 * [PDF](https://github.com/mlaviolet/Mosaic-cheatsheets/blob/master/mosaic-cheatsheet-lattice.pdf) and [source PowerPoint](https://github.com/mlaviolet/Mosaic-cheatsheets/blob/master/mosaic-cheatsheet-lattice.pptx) with graphics using the older `lattice` package.
 
-The cheat sheets are adapted from the *Student's Guide to R* by Horton, Pruim and Kaplan, in [`ggformula`](https://github.com/ProjectMOSAIC/LittleBooks/raw/master/StudentGuide/MOSAIC-StudentGuide.pdf) and [`lattice`](https://cran.r-project.org/doc/contrib/Horton+Pruim+Kaplan_MOSAIC-StudentGuide.pdf) versions. 
+The cheat sheets are adapted from the *Student's Guide to R* by Horton, Pruim, and Kaplan, in [`ggformula`](https://github.com/ProjectMOSAIC/LittleBooks/raw/master/StudentGuide/MOSAIC-StudentGuide.pdf) and [`lattice`](https://cran.r-project.org/doc/contrib/Horton+Pruim+Kaplan_MOSAIC-StudentGuide.pdf) versions. 
 
 You can find out more about Project MOSAIC at [http://mosaic-web.org]. Also see [OpenIntro](https://www.openintro.org/) for inexpensive textbooks that work well with `mosaic`, and other resources.
   
