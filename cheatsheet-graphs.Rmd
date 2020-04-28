@@ -1,0 +1,120 @@
+---
+title: "Cheatsheet graphs"
+author: "ML"
+date: "July 1, 2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+library(mosaic)
+options(digits = 4)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Formula interface
+```{r}
+bwplot(wage ~ sex, data = CPS85)
+
+gf_boxplot(wage ~ sex, data = CPS85) 
+
+```
+
+
+```{r}
+xyplot(wage ~ educ | sex, data = CPS85)
+
+gf_point(wage ~ educ | sex, data = CPS85, color = "blue")
+
+```
+
+```{r}
+xyplot(wage ~ educ, groups = sex, data = CPS85, auto.key = TRUE)
+
+gf_point(wage ~ educ, color = ~ sex, data = CPS85)
+```
+
+
+## One categorical variable
+
+
+```{r}
+bargraph(~ sex, type = "percent", data = HELPrct)
+
+gf_percents(~ sex, data = HELPrct)
+
+```
+
+## One quantitative variable
+### Histogram
+
+```{r}
+histogram(~ cesd, width = 5, center = 2.5, data = HELPrct)
+
+
+gf_dhistogram(~ cesd, data = HELPrct, bins = 12)
+# gf_histogram for showing counts
+```
+
+### Normal quantile plot
+```{r}
+qqmath(~ cesd, dist = "qnorm", data = HELPrct)
+
+gf_qq(~ cesd, data = HELPrct)
+```
+
+### Dot plot
+
+```{r}
+dotPlot(~ cesd, data = HELPrct)
+gf_dotplot(~ cesd, data = HELPrct)
+
+```
+
+### Density plot
+```{r}
+densityplot(~ cesd, data = HELPrct)
+gf_dens(~ cesd, data = HELPrct)
+```
+
+## Two categorical variables
+ggplot equivalent to mosaic plot? Apparently not.
+
+```{r}
+mosaicplot(~ substance + sex, color = TRUE, data = HELPrct)
+
+```
+
+### Scatterplot with regression line and smooth
+```{r}
+xyplot(cesd ~ mcs, type = c("p", "r", "smooth"), data = HELPrct)
+gf_point(cesd ~ mcs, data = HELPrct) %>% 
+  gf_smooth() %>% 
+  gf_lm(cesd ~ mcs, data = HELPrct, size = 1.5)
+
+```
+
+### Comparative normal quantile plot
+How to change panel layout in gf_qq?
+```{r}
+qqmath(~ cesd | sex, data = HELPrct, layout = c(1, 2)) 
+gf_qq(~ length | sex, data = KidsFeet, ylab = "Length of longer foot (cm)", 
+      xlab = "Normal quantile") %>% 
+  gf_qqline()
+  
+
+```
+
+```{r}
+favstats(cesd ~ substance, data = HELPrct)
+# Graphic summaries
+gf_boxplot(cesd ~ substance, data = HELPrct) 
+# Fit and summarize model
+modsubstance <- lm(cesd ~ substance, data = HELPrct)
+anova(modsubstance)
+# Which differences are significant? 
+pairwise <- TukeyHSD(modsubstance)
+mplot(pairwise)
+
+```
+
+
