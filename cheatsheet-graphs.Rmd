@@ -1,7 +1,7 @@
 ---
 title: "Cheatsheet graphs"
 author: "ML"
-date: "December 10, 2023"
+date: "`r Sys.Date()`"
 output: pdf_document
 ---
 
